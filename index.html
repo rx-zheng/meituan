@@ -81,7 +81,7 @@
       </section>
 
       <section class="page" id="safety">
-        <div class="toolbar"><div><h2>平安回家</h2><small>主动报备，不定位、不监控</small></div><div><button class="ghost" onclick="reportLate()">我要晚归</button> <button class="primary" onclick="arriveHome('小王')">✓ 我已到家</button></div></div>
+        <div class="toolbar"><div><h2>平安回家</h2><small>主动报备，不定位、不监控</small></div><div><button class="ghost" onclick="editSafety()">提醒设置</button> <button class="ghost" onclick="reportLate()">我要晚归</button> <button class="primary" onclick="arriveHome('小王')">✓ 我已到家</button></div></div>
         <div class="notice green-note">默认回家时间前 30 分钟提醒本人；超过安全确认时间仍未响应，才通知指定室友。</div>
         <div class="grid"><article class="card span8"><div class="card-head"><h3>今晚状态</h3><span>最晚确认 23:30</span></div><div id="safetyList"></div></article><article class="card span4"><h3>我的预设</h3><div class="setting"><span>工作日回家</span><b>23:00</b></div><div class="setting"><span>周末回家</span><b>23:30</b></div><div class="setting"><span>提前提醒</span><b>30 分钟</b></div><div class="setting"><span>异常通知</span><b>小林</b></div><p class="privacy">仅记录状态变化，不采集实时位置。安全记录 30 天后自动清理。</p></article></div>
       </section>
@@ -94,6 +94,11 @@
       <section class="page" id="audit">
         <div class="toolbar"><div><h2>档案与留痕</h2><small>所有关键操作只追加，不无痕覆盖</small></div><button class="primary" onclick="exportLogs()">导出 JSON 档案</button></div>
         <article class="card"><div class="card-head"><div class="filters"><select id="logType" onchange="renderLogs()"><option>全部模块</option><option>账单</option><option>任务</option><option>物品</option><option>访客</option><option>安全</option><option>公约</option></select><input id="logSearch" placeholder="搜索记录编号或内容" oninput="renderLogs()"></div><span class="pill green">共 <b id="logCount"></b> 条记录</span></div><div class="timeline" id="logList"></div></article>
+      </section>
+
+      <section class="page" id="settings">
+        <div class="toolbar"><div><h2>合租空间设置</h2><small>成员、提醒与数据管理</small></div><button class="primary" onclick="openMemberModal()">＋ 邀请成员</button></div>
+        <div class="grid"><article class="card span8"><div class="card-head"><h3>室友成员</h3><span class="pill green">湖畔小屋</span></div><div id="memberList"></div></article><article class="card span4"><h3>生活提醒</h3><div class="setting"><span>天气城市</span><b id="weatherCity">上海·浦东</b></div><div class="setting"><span>缴费提醒</span><b>提前7天、3天</b></div><div class="setting"><span>低库存提醒</span><b>已开启</b></div><div class="setting"><span>到家确认</span><b>已开启</b></div><button class="ghost" onclick="editPreferences()">修改提醒设置</button></article></div>
       </section>
     </main>
   </div>
