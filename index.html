@@ -1,38 +1,105 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>同住｜合租生活管家</title><style>
-:root{--ink:#17352d;--muted:#718079;--bg:#f3f5ef;--card:#fff;--green:#2c6e59;--lime:#dff06b;--line:#e1e7df;--warn:#e97942;--blue:#d8edff}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 system-ui,"Microsoft YaHei",sans-serif}.app{display:grid;grid-template-columns:220px 1fr;min-height:100vh}aside{padding:26px 18px;background:#17352d;color:white;position:sticky;top:0;height:100vh}.brand{font-size:24px;font-weight:900;margin:0 0 30px}.brand small{display:block;font-size:11px;color:#aac0b8;letter-spacing:2px}.nav button{display:block;width:100%;border:0;background:none;color:#b9cbc5;text-align:left;padding:12px;border-radius:10px;margin:3px 0;cursor:pointer}.nav button.active,.nav button:hover{background:#2b4c42;color:white}.home{position:absolute;bottom:24px;font-size:12px;color:#adc0ba}main{padding:28px;max-width:1280px;width:100%}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}.top h1{margin:0;font-size:26px}.avatars{display:flex;gap:0}.avatar{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--lime);border:2px solid white;margin-left:-7px;font-weight:800}.page{display:none}.page.active{display:block}.hero{background:var(--ink);color:white;border-radius:20px;padding:24px;display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.hero h2{margin:0 0 6px;font-size:24px}.weather{background:#27493e;border-radius:14px;padding:12px 16px;min-width:220px}.weather b{font-size:21px}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}.span4{grid-column:span 4}.span6{grid-column:span 6}.span8{grid-column:span 8}.span12{grid-column:span 12}.label{color:var(--muted);font-size:12px}.big{font-size:28px;font-weight:850;margin:4px 0}.badge{display:inline-block;padding:4px 8px;border-radius:99px;background:#e8f4ee;color:var(--green);font-size:12px}.badge.warn{background:#fff0e7;color:#ae4e20}.section-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.section-title h3{margin:0;font-size:16px}button.primary{border:0;background:var(--green);color:white;border-radius:10px;padding:9px 13px;cursor:pointer}button.soft{border:0;background:#edf3ee;color:var(--green);border-radius:9px;padding:7px 10px;cursor:pointer}.item{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-top:1px solid var(--line)}.item:first-of-type{border-top:0}.item strong{display:block}.item small{color:var(--muted)}.progress{height:7px;background:#edf0eb;border-radius:9px;overflow:hidden;margin-top:8px}.progress i{display:block;height:100%;background:var(--lime)}.money{font-weight:800;font-size:16px}.timeline{border-left:2px solid var(--line);padding-left:15px}.event{margin:0 0 15px;position:relative}.event:before{content:"";position:absolute;width:8px;height:8px;border-radius:50%;background:var(--green);left:-20px;top:6px}.event small{color:var(--muted)}.form{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}input,select{border:1px solid var(--line);background:white;padding:9px 10px;border-radius:9px;min-width:120px}.toast{position:fixed;right:24px;bottom:24px;background:var(--ink);color:white;padding:12px 16px;border-radius:10px;display:none}.toast.show{display:block}.mobile{display:none}@media(max-width:800px){.app{display:block}aside{height:auto;position:static;padding:16px}.brand{margin:0}.nav{display:none}.home{display:none}main{padding:16px}.top{margin-top:4px}.grid{display:block}.card{margin-bottom:12px}.hero{display:block}.weather{margin-top:16px}.mobile{display:flex;position:fixed;bottom:0;left:0;right:0;background:white;border-top:1px solid var(--line);z-index:5;justify-content:space-around;padding:7px}.mobile button{border:0;background:none;color:var(--muted);font-size:11px}.mobile b{display:block;font-size:16px}body{padding-bottom:58px}}
-</style></head><body><div class="app"><aside><div class="brand">同住<small>ROOMIE CARE</small></div><div class="nav" id="nav"></div><div class="home">湖畔小屋 · 4 位室友</div></aside><main><div class="top"><div><span class="label">2026年9月12日 · 星期六</span><h1 id="title">今日总览</h1></div><div class="avatars"><span class="avatar">王</span><span class="avatar" style="background:#ffd9c8">林</span><span class="avatar" style="background:#d8edff">陈</span><span class="avatar" style="background:#eadfff">杰</span></div></div>
-<section class="page active" id="dashboard"><div class="hero"><div><span class="badge">今日生活提醒</span><h2>下午有雨，出门记得带伞 ☂</h2><div>小陈今晚晚归，预计 00:30 到家；阳台衣物建议提前收回。</div></div><div class="weather"><small>上海 · 浦东</small><br><b>24℃ 小到中雨</b><br><small>降雨概率 85% · 21—27℃</small></div></div><div class="grid">
-<div class="card span4"><span class="label">我的待付款</span><div class="big">¥ 1,581.60</div><span class="badge warn">房租 3 天后到期</span></div>
-<div class="card span4"><span class="label">今日值日</span><div class="big">厨房清洁</div><span class="badge">负责人：小林</span></div>
-<div class="card span4"><span class="label">平安回家</span><div class="big">3 / 4</div><span class="label">1 人已报备晚归</span></div>
-<div class="card span8"><div class="section-title"><h3>近期账单</h3><button class="soft" onclick="go('bills')">查看全部</button></div><div class="item"><div><strong>9月房租</strong><small>9月15日到期 · 小王负责</small></div><div><span class="money">¥6,000</span><br><span class="badge warn">待缴费</span></div></div><div class="item"><div><strong>8月电费</strong><small>已上传缴费凭证 · 3人待结算</small></div><div><span class="money">¥326.40</span><br><span class="badge">已垫付</span></div></div></div>
-<div class="card span4"><div class="section-title"><h3>公共物品</h3><button class="soft" onclick="useItem()">登记消耗</button></div><strong>抽纸库存偏低</strong><div class="progress"><i id="stockbar" style="width:22%"></i></div><p class="label" id="stocktext">剩余 2 包 · 低于安全库存</p><button class="primary" onclick="buyItem()">加入采购清单</button></div>
-<div class="card span6"><div class="section-title"><h3>今晚回家状态</h3><button class="soft" onclick="arrive()">我已到家</button></div><div class="item"><div><strong>小王</strong><small>预计 22:30</small></div><span class="badge" id="homeState">预计按时</span></div><div class="item"><div><strong>小陈</strong><small>预计 00:30</small></div><span class="badge warn">已报备晚归</span></div></div>
-<div class="card span6"><div class="section-title"><h3>近期访客</h3><button class="soft" onclick="go('visitors')">查看申请</button></div><strong>小林的父母 · 2人</strong><p class="label">9月16日—18日留宿 · 待 1 人确认</p><span class="badge warn">与客厅聚会时间有冲突</span></div></div></section>
-<section class="page" id="bills"><div class="grid"><div class="card span12"><div class="section-title"><h3>账单与缴费</h3><span class="badge">全流程留痕</span></div><div class="form"><input id="billName" placeholder="账单名称"><input id="billAmount" type="number" placeholder="金额"><input id="billDate" type="date"><button class="primary" onclick="addBill()">创建账单</button></div><div id="billList"></div></div></div></section>
-<section class="page" id="tasks"><div class="grid"><div class="card span12"><div class="section-title"><h3>本周任务</h3><button class="primary" onclick="completeTask()">完成今日值日</button></div><div class="item"><div><strong>厨房清洁</strong><small>今天 21:00前 · 小林</small></div><span class="badge warn" id="taskState">待处理</span></div><div class="item"><div><strong>卫生间清洁</strong><small>周日 · 阿杰</small></div><span class="badge">已排班</span></div><div class="item"><div><strong>采购抽纸</strong><small>周日 · 小王</small></div><span class="badge">待接收</span></div></div></div></section>
-<section class="page" id="visitors"><div class="grid"><div class="card span12"><div class="section-title"><h3>访客与留宿</h3><span class="badge warn">1 项待确认</span></div><div class="item"><div><strong>小林的父母 · 春节前探访</strong><small>9月16日 18:00—9月18日 10:00 · 使用客厅</small></div><div><button class="soft" onclick="visitor(false)">有异议</button> <button class="primary" onclick="visitor(true)">同意</button></div></div><p class="label">系统已检查：连续留宿 2 晚，符合当前公约；9月16日晚存在客厅预约冲突。</p></div></div></section>
-<section class="page" id="rules"><div class="grid"><div class="card span12"><div class="section-title"><h3>室友公约</h3><span class="badge">版本 v2.1</span></div><div class="item"><div><strong>访客须提前 24 小时报备</strong><small>2026-08-21 全员通过</small></div><span class="badge">已生效</span></div><div class="item"><div><strong>23:00 后保持安静</strong><small>修改内容需重新投票，不覆盖历史版本</small></div><span class="badge">已生效</span></div><div class="item"><div><strong>连续留宿超过 3 天的费用规则</strong><small>3/4 人已确认</small></div><button class="primary" onclick="audit('确认公约','连续留宿费用规则')">确认</button></div></div></div></section>
-<section class="page" id="audit"><div class="grid"><div class="card span12"><div class="section-title"><h3>档案与操作留痕</h3><button class="soft" onclick="exportLog()">导出记录</button></div><div class="timeline" id="timeline"></div></div></div></section>
-</main></div><div class="mobile" id="mobile"></div><div class="toast" id="toast"></div><script>
-const tabs=[['dashboard','⌂','总览'],['bills','¥','账单'],['tasks','✓','任务'],['visitors','♙','访客'],['rules','§','公约'],['audit','≡','档案']];
-let logs=JSON.parse(localStorage.getItem('roomie_logs')||'null')||[{time:'今天 20:36',who:'小王',action:'上传缴费凭证',detail:'8月电费 ¥326.40 · PAY-202609-0018'},{time:'今天 20:12',who:'小林',action:'完成清洁任务',detail:'厨房清洁 · 待验收'},{time:'今天 18:30',who:'阿杰',action:'确认访客申请',detail:'小林父母留宿申请'}];
-let bills=JSON.parse(localStorage.getItem('roomie_bills')||'null')||[{name:'9月房租',amount:6000,date:'2026-09-15',status:'待缴费'},{name:'8月电费',amount:326.4,date:'2026-09-10',status:'已垫付'}];
-function init(){nav.innerHTML=tabs.map((t,i)=>'<button class="'+(i?'':'active')+'" onclick="go(\''+t[0]+'\',this)">'+t[1]+'　'+t[2]+'</button>').join('');mobile.innerHTML=tabs.slice(0,5).map(t=>'<button onclick="go(\''+t[0]+'\')"><b>'+t[1]+'</b>'+t[2]+'</button>').join('');renderBills();renderLog()}
-function go(id,btn){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('.nav button').forEach(x=>x.classList.remove('active'));let i=tabs.findIndex(x=>x[0]===id);document.querySelectorAll('.nav button')[i]?.classList.add('active');title.textContent=tabs[i][2]+(id==='dashboard'?'总览':'管理')}
-function audit(action,detail){logs.unshift({time:new Date().toLocaleString('zh-CN',{hour12:false}),who:'小王',action,detail});localStorage.setItem('roomie_logs',JSON.stringify(logs));renderLog();toast.textContent=action+'，记录已存档';toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1800)}
-function renderLog(){timeline.innerHTML=logs.map(x=>'<div class="event"><strong>'+x.who+' · '+x.action+'</strong><br><small>'+x.time+' · '+x.detail+'</small></div>').join('')}
-function renderBills(){billList.innerHTML=bills.map((b,i)=>'<div class="item"><div><strong>'+b.name+'</strong><small>'+b.date+' 到期 · 4人平均分摊</small></div><div><span class="money">¥'+Number(b.amount).toFixed(2)+'</span> <button class="soft" onclick="pay('+i+')">'+b.status+'</button></div></div>').join('')}
-function addBill(){if(!billName.value||!billAmount.value||!billDate.value)return toastMsg('请填写完整');bills.unshift({name:billName.value,amount:billAmount.value,date:billDate.value,status:'待缴费'});localStorage.setItem('roomie_bills',JSON.stringify(bills));renderBills();audit('创建账单',billName.value+' ¥'+billAmount.value+' · 提前3天提醒')}
-function pay(i){bills[i].status='已垫付';localStorage.setItem('roomie_bills',JSON.stringify(bills));renderBills();audit('完成缴费',bills[i].name+' ¥'+bills[i].amount+' · 已生成AA分摊')}
-function completeTask(){taskState.textContent='待验收';taskState.className='badge';audit('提交任务完成','厨房清洁 · 等待室友验收')}
-function arrive(){homeState.textContent='已到家';audit('完成到家确认','22:18 已安全到家')}
-function useItem(){stockbar.style.width='12%';stocktext.textContent='剩余 1 包 · 建议立即补货';audit('登记物品消耗','抽纸 -1包 · 当前库存1包')}
-function buyItem(){audit('创建采购任务','抽纸 6包 · 负责人小王');toastMsg('已加入采购清单')}
-function visitor(ok){audit(ok?'同意访客申请':'提交访客异议','小林父母 9月16—18日留宿');toastMsg(ok?'已确认并存档':'异议已提交')}
-function toastMsg(s){toast.textContent=s;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1600)}
-function exportLog(){const blob=new Blob([JSON.stringify(logs,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='同住操作记录.json';a.click();audit('导出档案','操作记录 JSON')}
-init();
-</script></body></html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="同住——费用、家务、物资、访客和安全一站式合租生活管家">
+  <title>同住｜合租生活管家</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="identity-gate" id="identityGate">
+    <div class="gate-card">
+      <div class="gate-brand">同住<span>ROOMIE CARE</span></div>
+      <h1>欢迎回家</h1><p>确认身份后进入「湖畔小屋」</p>
+      <label>合租空间邀请码</label><input id="houseCode" value="HUPO2026" maxlength="8">
+      <label>选择你的身份</label>
+      <div class="member-grid">
+        <button onclick="selectIdentity('小王')"><i>王</i><b>小王</b><small>房屋管理员</small></button>
+        <button onclick="selectIdentity('小林')"><i>林</i><b>小林</b><small>普通成员</small></button>
+        <button onclick="selectIdentity('小陈')"><i>陈</i><b>小陈</b><small>普通成员</small></button>
+        <button onclick="selectIdentity('阿杰')"><i>杰</i><b>阿杰</b><small>普通成员</small></button>
+      </div>
+      <small class="demo-tip">演示版：点击任意成员即可体验其个人视角</small>
+    </div>
+  </div>
+  <div class="app">
+    <aside>
+      <div class="brand">同住<span>ROOMIE CARE</span></div>
+      <nav id="nav"></nav>
+      <div class="house"><b>湖畔小屋</b><small>上海 · 4 位室友</small></div>
+    </aside>
+    <main>
+      <header>
+        <div><small id="today"></small><h1 id="pageTitle">今日总览</h1></div>
+        <div class="header-actions"><button class="user-chip" onclick="switchIdentity()"><span id="userAvatar">王</span><b id="userName">小王</b><small id="userRole">管理员</small></button><button class="ghost" onclick="resetDemo()">重置演示</button></div>
+      </header>
+
+      <section class="page active" id="dashboard">
+        <div class="hero">
+          <div><span class="pill lime">今日生活提醒</span><h2>下午有雨，出门记得带伞 ☂</h2><p>小陈今晚晚归，预计 00:30 到家；阳台衣物建议提前收回。</p></div>
+          <div class="weather"><small>上海 · 浦东</small><b>24℃ 小到中雨</b><span>降雨概率 85% · 21—27℃</span></div>
+        </div>
+        <div class="grid stats">
+          <article class="card span3"><small>我的待付款</small><strong id="dueTotal">¥1,581.60</strong><span class="pill orange">房租 3 天后到期</span></article>
+          <article class="card span3"><small>今日值日</small><strong>厨房清洁</strong><span class="pill green">负责人：小林</span></article>
+          <article class="card span3"><small>低库存物品</small><strong id="lowStockCount">2 项</strong><span>抽纸、垃圾袋待补</span></article>
+          <article class="card span3"><small>平安回家</small><strong id="safeCount">3 / 4</strong><span>1 人已报备晚归</span></article>
+        </div>
+        <div class="grid">
+          <article class="card span7"><div class="card-head"><h3>近期账单</h3><button onclick="go('bills')">全部账单 →</button></div><div id="dashboardBills"></div></article>
+          <article class="card span5"><div class="card-head"><h3>今晚回家状态</h3><button onclick="arriveHome('小王')">我已到家</button></div><div id="dashboardSafety"></div></article>
+          <article class="card span4"><div class="card-head"><h3>本周值日</h3><button onclick="go('tasks')">查看排班 →</button></div><div id="dashboardTasks"></div></article>
+          <article class="card span4"><div class="card-head"><h3>公共物品</h3><button onclick="go('inventory')">查看库存 →</button></div><div id="dashboardStock"></div></article>
+          <article class="card span4"><div class="card-head"><h3>近期访客</h3><button onclick="go('visitors')">处理申请 →</button></div><div id="dashboardVisitor"></div></article>
+          <article class="card span12"><div class="card-head"><h3>最近动态</h3><button onclick="go('audit')">完整档案 →</button></div><div class="activity-grid" id="dashboardLogs"></div></article>
+        </div>
+      </section>
+
+      <section class="page" id="bills">
+        <div class="toolbar"><div class="tabs"><button class="active">全部账单</button><button>周期账单</button><button>AA结算</button></div><button class="primary" onclick="openBillModal()">＋ 新建账单</button></div>
+        <div class="grid stats"><article class="card span4"><small>本月总支出</small><strong>¥6,842.40</strong><span>较上月 ↓ 8.2%</span></article><article class="card span4"><small>待向服务商缴费</small><strong id="providerDue">¥6,120.00</strong><span class="pill orange">2 笔即将到期</span></article><article class="card span4"><small>室友内部待结算</small><strong>¥1,663.20</strong><span>3 位室友待付款</span></article></div>
+        <article class="card"><div class="card-head"><div><h3>账单列表</h3><small>缴费与室友结算分开记录</small></div><select id="billFilter" onchange="renderBills()"><option>全部状态</option><option>待缴费</option><option>已垫付</option><option>已结清</option></select></div><div id="billList"></div></article>
+      </section>
+
+      <section class="page" id="tasks">
+        <div class="toolbar"><div><h2>本周清洁排班</h2><small>9月7日—9月13日 · 自动轮班</small></div><button class="primary" onclick="openTaskModal()">＋ 新建任务</button></div>
+        <div class="week" id="weekBoard"></div>
+        <article class="card"><div class="card-head"><h3>任务档案</h3><span class="pill green">完成后需室友验收</span></div><div id="taskList"></div></article>
+      </section>
+
+      <section class="page" id="inventory">
+        <div class="toolbar"><div><h2>公共物品</h2><small>消耗、补货和费用自动关联</small></div><button class="primary" onclick="openStockModal()">＋ 登记物品</button></div>
+        <div class="stock-grid" id="stockGrid"></div>
+        <article class="card"><div class="card-head"><h3>采购清单</h3><span class="pill orange" id="shoppingCount"></span></div><div id="shoppingList"></div></article>
+      </section>
+
+      <section class="page" id="visitors">
+        <div class="toolbar"><div><h2>访客与留宿</h2><small>提前报备、冲突检测、室友确认</small></div><button class="primary" onclick="openVisitorModal()">＋ 发起报备</button></div>
+        <div class="notice">春节、国庆等节假日支持连续日期报备；多人或连续留宿需全体确认。</div>
+        <div class="grid"><article class="card span8"><div class="card-head"><h3>来访申请</h3><span class="pill orange">1 项待我确认</span></div><div id="visitorList"></div></article><article class="card span4"><h3>访客公约</h3><ul class="rules-mini"><li>访客须提前 24 小时报备</li><li>单人留宿一晚需室友确认</li><li>连续留宿超过 3 天需全员通过</li><li>23:00 后保持安静</li><li>访客产生的额外费用由邀请人承担</li></ul></article></div>
+      </section>
+
+      <section class="page" id="safety">
+        <div class="toolbar"><div><h2>平安回家</h2><small>主动报备，不定位、不监控</small></div><div><button class="ghost" onclick="reportLate()">我要晚归</button> <button class="primary" onclick="arriveHome('小王')">✓ 我已到家</button></div></div>
+        <div class="notice green-note">默认回家时间前 30 分钟提醒本人；超过安全确认时间仍未响应，才通知指定室友。</div>
+        <div class="grid"><article class="card span8"><div class="card-head"><h3>今晚状态</h3><span>最晚确认 23:30</span></div><div id="safetyList"></div></article><article class="card span4"><h3>我的预设</h3><div class="setting"><span>工作日回家</span><b>23:00</b></div><div class="setting"><span>周末回家</span><b>23:30</b></div><div class="setting"><span>提前提醒</span><b>30 分钟</b></div><div class="setting"><span>异常通知</span><b>小林</b></div><p class="privacy">仅记录状态变化，不采集实时位置。安全记录 30 天后自动清理。</p></article></div>
+      </section>
+
+      <section class="page" id="rules">
+        <div class="toolbar"><div><h2>室友公约</h2><small>全员共识、版本留档、修改可追溯</small></div><button class="primary" onclick="openRuleModal()">＋ 发起提案</button></div>
+        <div class="grid"><article class="card span8"><div class="card-head"><h3>当前公约 v2.1</h3><span class="pill green">2026-08-21 生效</span></div><div id="ruleList"></div></article><article class="card span4"><h3>确认进度</h3><div class="ring"><b>92%</b><span>成员确认率</span></div><div class="member-confirm"><span>小王 ✓</span><span>小林 ✓</span><span>小陈 ✓</span><span>阿杰 待确认</span></div></article></div>
+      </section>
+
+      <section class="page" id="audit">
+        <div class="toolbar"><div><h2>档案与留痕</h2><small>所有关键操作只追加，不无痕覆盖</small></div><button class="primary" onclick="exportLogs()">导出 JSON 档案</button></div>
+        <article class="card"><div class="card-head"><div class="filters"><select id="logType" onchange="renderLogs()"><option>全部模块</option><option>账单</option><option>任务</option><option>物品</option><option>访客</option><option>安全</option><option>公约</option></select><input id="logSearch" placeholder="搜索记录编号或内容" oninput="renderLogs()"></div><span class="pill green">共 <b id="logCount"></b> 条记录</span></div><div class="timeline" id="logList"></div></article>
+      </section>
+    </main>
+  </div>
+  <div class="mobile-nav" id="mobileNav"></div>
+  <div class="modal-wrap" id="modalWrap" onclick="closeModal(event)"><div class="modal" id="modal"></div></div>
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
